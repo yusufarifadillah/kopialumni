@@ -39,6 +39,10 @@
                 </a>
             @endif
 
+            &nbsp;<a class="px-6 py-3 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 
+hover:underline hover:text-blue-200" href="{{ route('register') }}" 
+role="button"><b>Register</b></a>
+
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
