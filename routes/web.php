@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CoaController;
 use App\Http\Controllers\ContohformController;
 
@@ -42,5 +42,9 @@ Route::get('/selamat', function () {
 Route::get('/contoh1', [App\Http\Controllers\Contoh1Controller::class, 'show']);
 // route contoh2
 Route::get('/contoh2', [App\Http\Controllers\Contoh2Controller::class, 'show']);
+
+Route::resource('/supplier', SupplierController::class)->middleware(['auth']);
+Route::get('/supplier/destroy/{id}', [App\Http\Controllers\SupplierController::class,'destroy'])->middleware(['auth']);
+
 
 require __DIR__.'/auth.php';
