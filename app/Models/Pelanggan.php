@@ -14,10 +14,10 @@ class Pelanggan extends Model
     // list kolom yang bisa diisi
     protected $fillable = ['kode_pelanggan','nama_pelanggan','no_tlp_pelanggan','alamat_pelanggan','jenis_kelamin_pelanggan'];
 
-    // query nilai max dari kode perusahaan untuk generate otomatis kode perusahaan
+    // query nilai max dari kode pelanggan untuk generate otomatis kode pelanggan
     public static function getKodePelanggan()
     {
-        // query kode perusahaan
+        // query kode pelanggan
         $sql = "SELECT IFNULL(MAX(kode_pelanggan), 'PL-000') as kode_pelanggan 
                 FROM pelanggan";
         $kodepelanggan = DB::select($sql);
