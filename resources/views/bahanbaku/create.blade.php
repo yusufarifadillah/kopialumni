@@ -73,19 +73,28 @@
                     @csrf
                     <fieldset disabled>
                         <div class="mb-3"><label for="kodebahanbakulabel">Kode Bahan Baku</label>
-                        <input class="form-control form-control-solid" id="kode_bahanbaku_tampil" name="kode_bahanbaku_tampil" type="text" placeholder="Contoh: PR-001" value="{{$kode_bahanbaku}}" readonly></div>
+                        <input class="form-control form-control-solid" id="kode_bahanbaku_tampil" name="kode_bahanbaku_tampil" type="text" placeholder="Contoh: BB-001" value="{{$kode_bahanbaku}}" readonly></div>
                     </fieldset>
                     <input type="hidden" id="kode_bahanbaku" name="kode_bahanbaku" value="{{$kode_bahanbaku}}">
 
                     <div class="mb-3"><label for="namabahanbakulabel">Nama Bahan Baku</label>
-                    <input class="form-control form-control-solid" id="nama_bahanbaku" name="nama_bahanbaku" type="text" placeholder="Contoh: Bahan Baku Susu" value="{{old('nama_bahanbaku')}}">
+                    <input class="form-control form-control-solid" id="nama_bahanbaku" name="nama_bahanbaku" type="text" placeholder="Contoh: Susu" value="{{old('nama_bahanbaku')}}">
                     </div>
                     
         
                     <div class="mb-0"><label for="jenisbahanbakulabel">Jenis Bahan Baku</label>
-                        <textarea class="form-control form-control-solid" id="jenis_bahanbaku" name="jenis_bahanbaku" rows="3" placeholder="Cth: Kopi">{{old('jenis_bahanbaku')}}</textarea>
+                    <br>
+                    <input class="form-check-input" type="radio" name="jenis_bahan_baku" id="makanan" value="makanan">
+                    <label class="form-check-label" for="makanan">
+                      Makanan
+                    </label>
+                    <input class="form-check-input" type="radio" name="jenis_bahan_baku" id="minuman" value="minuman">
+                    <label class="form-check-label" for="minuman">
+                      Minuman
+                    </label>
                     </div>
-
+                    <br>
+                    
                     <div class="mb-3"><label for="hargasatuanlabel">Harga Satuan</label>
                     <input class="form-control form-control-solid" id="harga_satuan" name="harga_satuan" type="text" placeholder="Contoh: 25000" value="{{old('harga_satuan')}}">
                     </div>

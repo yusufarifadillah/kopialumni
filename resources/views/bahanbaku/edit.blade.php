@@ -74,17 +74,17 @@
                     @method('PUT')
                     <fieldset disabled>
                         <div class="mb-3"><label for="kodebahanbakulabel">Kode Bahan Baku</label>
-                        <input class="form-control form-control-solid" id="kode_bahanbaku_tampil" name="kode_bahanbaku_tampil" type="text" placeholder="Contoh: PR-001" value="{{$bahanbaku->kode_bahanbaku}}" readonly></div>
+                        <input class="form-control form-control-solid" id="kode_bahanbaku_tampil" name="kode_bahanbaku_tampil" type="text" placeholder="Contoh: BB-001" value="{{$bahanbaku->kode_bahanbaku}}" readonly></div>
                     </fieldset>
                     <input type="hidden" id="kode_bahanbaku" name="kode_bahanbaku" value="{{$bahanbaku->kode_bahanbaku}}">
 
                     <div class="mb-3"><label for="namabahanbakulabel">Nama Bahan Baku</label>
-                    <input class="form-control form-control-solid" id="nama_bahanbaku" name="nama_bahanbaku" type="text" placeholder="Contoh: Bahan Baku Susu" value="{{$bahanbaku->nama_bahanbaku}}">
+                    <input class="form-control form-control-solid" id="nama_bahanbaku" name="nama_bahanbaku" type="text" placeholder="Contoh: Susu" value="{{$bahanbaku->nama_bahanbaku}}">
                     </div>
                     
         
                     <div class="mb-0"><label for="jenisbahanbakulabel">Jenis Bahan Baku</label>
-                        <textarea class="form-control form-control-solid" id="jenis_bahanbaku" name="jenis_bahanbaku" rows="3" placeholder="Cth: Kopi">{{$bahanbaku->jenis_bahanbaku}}</textarea>
+                        <textarea class="form-control form-control-solid" id="jenis_bahanbaku" name="jenis_bahanbaku" rows="3" placeholder="Contoh: Minuman ">{{$bahanbaku->jenis_bahanbaku}}</textarea>
                     </div>
 
                     <div class="mb-3"><label for="hargasatuanlabel">Harga Satuan</label>
