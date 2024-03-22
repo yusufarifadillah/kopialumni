@@ -2,7 +2,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\CoaController;
+use App\Http\Controllers\BahanbakuController;
 use App\Http\Controllers\ContohformController;
 
 /*
@@ -45,6 +45,9 @@ Route::get('/contoh2', [App\Http\Controllers\Contoh2Controller::class, 'show']);
 
 Route::resource('/supplier', SupplierController::class)->middleware(['auth']);
 Route::get('/supplier/destroy/{id}', [App\Http\Controllers\SupplierController::class,'destroy'])->middleware(['auth']);
+
+Route::resource('/bahanbaku', BahanbakuController::class)->middleware(['auth']);
+Route::get('/bahanbaku/destroy/{id}', [App\Http\Controllers\BahanbakuController::class,'destroy'])->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';
