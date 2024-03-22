@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PerusahaanController;
 use App\Http\Controllers\CoaController;
 use App\Http\Controllers\ContohformController;
+use App\Http\Controllers\PelangganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +43,9 @@ Route::get('/selamat', function () {
 Route::get('/contoh1', [App\Http\Controllers\Contoh1Controller::class, 'show']);
 // route contoh2
 Route::get('/contoh2', [App\Http\Controllers\Contoh2Controller::class, 'show']);
+
+// route ke master data pelanggan
+Route::resource('/pelanggan', PelangganController::class)->middleware(['auth']);
+Route::get('/pelanggan/destroy/{id}', [App\Http\Controllers\PelangganController::class,'destroy'])->middleware(['auth']);
 
 require __DIR__.'/auth.php';
