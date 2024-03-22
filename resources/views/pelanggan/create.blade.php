@@ -86,16 +86,16 @@
                     </div>
         
                     <div class="mb-0"><label for="alamatpelangganlabel">Alamat Pelanggan</label>
-                        <textarea class="form-control form-control-solid" id="alamat_pelanggan" name="alamat_pelanggan" rows="3" placeholder="Cth: Jl PGA 18">{{old('alamat_pelanggan')}}</textarea>
+                        <textarea class="form-control form-control-solid" id="alamat_pelanggan" name="alamat_pelanggan" rows="3" placeholder="Contoh: Jl PGA 18">{{old('alamat_pelanggan')}}</textarea>
                     </div>
 
                     <div class="form-group"><label for="jeniskelaminpelangganlabel">Jenis Kelamin Pelanggan</label>
                         <br>
                         <label class="radio-inline">
-                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="perempuan">Perempuan</label>
+                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Perempuan"> Perempuan</label>
                         <br>
                         <label class="radio-inline">
-                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="lakilaki">Laki laki</label>
+                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Laki-laki"> Laki-laki</label>
                     </div>
                     <br>
                     <!-- untuk tombol simpan -->

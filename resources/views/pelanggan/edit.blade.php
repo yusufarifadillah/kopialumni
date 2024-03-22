@@ -22,7 +22,7 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Admin</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -83,7 +83,7 @@
                     </div>
                     
                     <div class="mb-3"><label for="notlppelangganlabel">No Telepon Pelanggan</label>
-                    <input class="form-control form-control-solid" id="no_tlp_pelanggan" name="no_tlp_pelanggan" type="text" placeholder="Contoh: 08xxxxxxxxxx" value="{{old('no_tlp_pelanggan')}}">
+                    <input class="form-control form-control-solid" id="no_tlp_pelanggan" name="no_tlp_pelanggan" type="text" placeholder="Contoh: 08xxxxxxxxxx" value="{{$pelanggan->no_tlp_pelanggan}}">
                     </div>
         
                     <div class="mb-0"><label for="alamatpelangganlabel">Alamat Pelanggan</label>
@@ -93,10 +93,10 @@
                     <div class="form-group"><label for="jeniskelaminpelangganlabel">Jenis Kelamin Pelanggan</label>
                         <br>
                         <label class="radio-inline">
-                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="perempuan">Perempuan</label>
+                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Perempuan" {{$pelanggan->jenis_kelamin_pelanggan == "Perempuan" ? "checked" : ""}}>Perempuan</label>
                         <br>
                         <label class="radio-inline">
-                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="lakilaki">Laki laki</label>
+                        <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Laki-laki" {{$pelanggan->jenis_kelamin_pelanggan == "Laki-laki" ? "checked" : ""}}>Laki-laki</label>
                     </div>
                     <br>
                     <br>

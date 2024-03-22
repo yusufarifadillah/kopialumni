@@ -87,7 +87,7 @@ class PelangganController extends Controller
             'jenis_kelamin_pelanggan' => 'required',
         ]);
     
-        $perusahaan->update($validated);
+        $pelanggan->update($validated);
     
         return redirect()->route('pelanggan.index')->with('success','Data Berhasil di Ubah');
     }
