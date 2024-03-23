@@ -22,7 +22,7 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Admin</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -79,7 +79,7 @@
                     <input type="hidden" id="kode_pegawai" name="kode_pegawai" value="{{$pegawai->kode_pegawai}}">
 
                     <div class="mb-3"><label for="namapegawailabel">Nama Pegawai</label>
-                    <input class="form-control form-control-solid" id="nama_pegawai" name="nama_pegawai type="text" placeholder="Contoh: Lee Jeno" value="{{$pegawai->nama_pegawai}}">
+                    <input class="form-control form-control-solid" id="nama_pegawai" name="nama_pegawai" type="text" placeholder="Contoh: Lee Jeno" value="{{$pegawai->nama_pegawai}}">
                     </div>
                     
         
@@ -91,16 +91,12 @@
                         <textarea class="form-control form-control-solid" id="posisi_pegawai" name="posisi_pegawai" rows="3" placeholder="Cth: Kasir">{{$pegawai->posisi_pegawai}}</textarea>
                     </div>
 
-                    <div class="mb-0"><label for="jeniskelaminpegawai">Jenis_Kelamin_Pegawai</label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="perempuan" value="perempuan">
-                    <label class="form-check-label" for="perempuan">
-                      Perempuan
-                    </label>
-                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="laki-laki" value="laki-laki">
-                    <label class="form-check-label" for="laki-laki">
-                      Laki-laki
-                    </label>
+                    <div class="form-group"><label for="jeniskelaminpelanggan">Jenis Kelamin Pelanggan</label>
+                        <br>
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_kelamin_pegawai" name="jenis_kelamin_pegawai" value="Perempuan" {{$pegawai->jenis_kelamin_pegawai == "Perempuan" ? "checked" : ""}}>Perempuan</label>
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_kelamin_pegawai" name="jenis_kelamin_pegawai" value="Laki-laki" {{$pegawai->jenis_kelamin_pegawai == "Laki-laki" ? "checked" : ""}}>Laki-laki</label>
                     </div>
                     <br>
                     <br>
