@@ -51,7 +51,7 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{route('dashboardbootstrap')}}" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -63,21 +63,50 @@
                             <span class="hide-menu">Masterdata</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ route('coa.index') }}" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('menu.index')}}" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-user"></i>
+                                    <i class="ti ti-menu-2"></i>
                                 </span>
-                                <span class="hide-menu">Akun</span>
+                                <span class="hide-menu">Menu</span>
                             </a>
                         </li>
+
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ route('perusahaan.index') }}" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('pegawai.index') }}" aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-building"></i>
+                                    <i class="ti ti-user-circle"></i>
                                 </span>
-                                <span class="hide-menu">Perusahaan</span>
+                                <span class="hide-menu">Pegawai</span>
                             </a>
                         </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('pelanggan.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-users"></i>
+                                </span>
+                                <span class="hide-menu">Pelanggan</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('supplier.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-truck"></i>
+                                </span>
+                                <span class="hide-menu">Supplier</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('bahanbaku.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-box"></i>
+                                </span>
+                                <span class="hide-menu">Bahan Baku</span>
+                            </a>
+                        </li>
+
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Transaksi</span>
@@ -209,7 +238,7 @@
                 {{ $slot }}
 
                 <div class="py-6 px-6 text-center">
-                    <p class="mb-0 fs-4">&COPY; 2024 Septian Adhitya All Rights Reserved</p>
+                    <p class="mb-0 fs-4">&COPY; Developed by Kelompok 2</p>
                 </div>
             </div>
         </div>
