@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Pelanggan</h5>
+            <h5 class="card-title fw-semibold mb-4">Tambah Data Pelanggan</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())

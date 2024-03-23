@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Menu</h5>
+            <h5 class="card-title fw-semibold mb-4">Ubah Data Menu</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -91,7 +91,7 @@
                     
         
                     <div class="mb-0"><label for="hargalabel">Harga</label>
-                    <input class="form-control form-control-solid" id="harga" name="harga" rows="3" placeholder="10000" value="{{old('harga')}}">    
+                    <input class="form-control form-control-solid" id="harga" name="harga" rows="3" placeholder="Contoh: 10000" value="{{$menu->harga}}">    
                     </div>
                     <br>
                     <!-- untuk tombol simpan -->

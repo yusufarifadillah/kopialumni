@@ -45,7 +45,7 @@ class BahanbakuController extends Controller
     {
         $validated = $request->validate([
             'kode_bahanbaku' => 'required',
-            'nama_bahanbaku' => 'required|unique:bahanbaku|min:1|max:255',
+            'nama_bahanbaku' => 'required',
             'jenis_bahanbaku' => 'required',
             'harga_satuan' => 'required',
             'kuantitas' => 'required',
@@ -84,7 +84,7 @@ class BahanbakuController extends Controller
     {
         $validated = $request->validate([
             'kode_bahanbaku' => 'required',
-            'nama_bahanbaku' => 'required|unique:bahanbaku|min:1|max:255',
+            'nama_bahanbaku' => 'required',
             'jenis_bahanbaku' => 'required',
             'harga_satuan' => 'required',
             'kuantitas' => 'required',

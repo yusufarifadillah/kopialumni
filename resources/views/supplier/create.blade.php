@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Supplier</h5>
+            <h5 class="card-title fw-semibold mb-4">Tambah Data Supplier</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="mb-3"><label for="notelpsupplierlabel">No Telepon Supplier</label>
-                    <input class="form-control form-control-solid" id="no_telp_supplier" name="no_telp_supplier" type="text" placeholder="Contoh: 08123456789" value="{{old('no_telp_supplier')}}">
+                    <input class="form-control form-control-solid" id="no_telp_supplier" name="no_telp_supplier" type="text" placeholder="Contoh: 08xxxxxxxxxx" value="{{old('no_telp_supplier')}}">
                     </div>
 
                     <div class="mb-3"><label for="namacpsupplierlabel">Nama Contact Person Supplier</label>

@@ -47,7 +47,7 @@ class SupplierController extends Controller
     {
         $validated = $request->validate([
             'kode_supplier' => 'required',
-            'nama_supplier' => 'required|unique:supplier|min:1|max:255',
+            'nama_supplier' => 'required',
             'alamat_supplier' => 'required',
             'no_telp_supplier' => 'required',
             'nama_cp_supplier' => 'required',
@@ -86,7 +86,7 @@ class SupplierController extends Controller
     {
         $validated = $request->validate([
             'kode_supplier' => 'required',
-            'nama_supplier' => 'required|unique:supplier|min:1|max:255',
+            'nama_supplier' => 'required',
             'alamat_supplier' => 'required',
             'no_telp_supplier' => 'required',
             'nama_cp_supplier' => 'required',

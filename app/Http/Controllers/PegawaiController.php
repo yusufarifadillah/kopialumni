@@ -55,9 +55,9 @@ class PegawaiController extends Controller
         //digunakan untuk validasi kemudian kalau ok tidak ada masalah baru disimpan ke db
         $validated = $request->validate([
             'kode_pegawai' => 'required',
-            'nama_pegawai' => 'required|unique:pegawai|min:5|max:255',
+            'nama_pegawai' => 'required',
             'no_telp_pegawai' => 'required',
-            'posisi_pegawai' => 'required|unique:pegawai|min:5|max:255',
+            'posisi_pegawai' => 'required',
             'jenis_kelamin_pegawai' => 'required',
         ]);
 
@@ -101,9 +101,9 @@ class PegawaiController extends Controller
         //digunakan untuk validasi kemudian kalau ok tidak ada masalah baru diupdate ke db
         $validated = $request->validate([
             'kode_pegawai' => 'required',
-            'nama_pegawai' => 'required|max:255',
+            'nama_pegawai' => 'required',
             'no_telp_pegawai' => 'required',
-            'posisi_pegawai' => 'required|max:255',
+            'posisi_pegawai' => 'required',
             'jenis_kelamin_pegawai' => 'required',
         ]);
     

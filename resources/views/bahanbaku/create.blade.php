@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Bahan Baku</h5>
+            <h5 class="card-title fw-semibold mb-4">Tambah Data Bahan Baku</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -82,16 +82,13 @@
                     </div>
                     
         
-                    <div class="mb-0"><label for="jenisbahanbakulabel">Jenis Bahan Baku</label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="jenis_bahan_baku" id="makanan" value="makanan">
-                    <label class="form-check-label" for="makanan">
-                      Makanan
-                    </label>
-                    <input class="form-check-input" type="radio" name="jenis_bahan_baku" id="minuman" value="minuman">
-                    <label class="form-check-label" for="minuman">
-                      Minuman
-                    </label>
+                    <div class="form-group"><label for="jenisbahanbakulabel">Jenis Baku</label>
+                        <br>
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_bahanbaku" name="jenis_bahanbaku" value="Makanan"> Makanan</label>
+                        
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_bahanbaku" name="jenis_bahanbaku" value="Minuman"> Minuman</label>
                     </div>
                     <br>
                     

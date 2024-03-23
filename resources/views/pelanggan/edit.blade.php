@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Pelanggan</h5>
+            <h5 class="card-title fw-semibold mb-4">Ubah Data Pelanggan</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -94,7 +94,7 @@
                         <br>
                         <label class="radio-inline">
                         <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Perempuan" {{$pelanggan->jenis_kelamin_pelanggan == "Perempuan" ? "checked" : ""}}>Perempuan</label>
-                        <br>
+                        
                         <label class="radio-inline">
                         <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Laki-laki" {{$pelanggan->jenis_kelamin_pelanggan == "Laki-laki" ? "checked" : ""}}>Laki-laki</label>
                     </div>

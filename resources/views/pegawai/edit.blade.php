@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Pegawai</h5>
+            <h5 class="card-title fw-semibold mb-4">Ubah Data Pegawai</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -83,15 +83,15 @@
                     </div>
                     
         
-                    <div class="mb-0"><label for="notelppegawailabel">No_Telp_Pegawai</label>
-                        <textarea class="form-control form-control-solid" id="no_telp_pegawai" name="no_telp_pegawai" rows="3" placeholder="Cth: 08123456789">{{$pegawai->no_telp_pegawai}}</textarea>
+                    <div class="mb-0"><label for="notelppegawailabel">No Telepon Pegawai</label>
+                    <input class="form-control form-control-solid" id="no_telp_pegawai" name="no_telp_pegawai" rows="3" placeholder="Contoh: 08xxxxxxxxxx" value="{{$pegawai->no_telp_pegawai}}">
                     </div>
 
-                    <div class="mb-0"><label for="posisipegawailabel">Posisi_Pegawai</label>
-                        <textarea class="form-control form-control-solid" id="posisi_pegawai" name="posisi_pegawai" rows="3" placeholder="Cth: Kasir">{{$pegawai->posisi_pegawai}}</textarea>
+                    <div class="mb-0"><label for="posisipegawailabel">Posisi Pegawai</label>
+                    <input class="form-control form-control-solid" id="posisi_pegawai" name="posisi_pegawai" rows="3" placeholder="Contoh: Kasir" value="{{$pegawai->posisi_pegawai}}">
                     </div>
 
-                    <div class="form-group"><label for="jeniskelaminpelanggan">Jenis Kelamin Pelanggan</label>
+                    <div class="form-group"><label for="jeniskelaminpegawai">Jenis Kelamin</label>
                         <br>
                         <label class="radio-inline">
                         <input type="radio" id="jenis_kelamin_pegawai" name="jenis_kelamin_pegawai" value="Perempuan" {{$pegawai->jenis_kelamin_pegawai == "Perempuan" ? "checked" : ""}}>Perempuan</label>

@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Bahan Baku</h5>
+            <h5 class="card-title fw-semibold mb-4">Ubah Data Bahan Baku</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -83,8 +83,13 @@
                     </div>
                     
         
-                    <div class="mb-0"><label for="jenisbahanbakulabel">Jenis Bahan Baku</label>
-                        <textarea class="form-control form-control-solid" id="jenis_bahanbaku" name="jenis_bahanbaku" rows="3" placeholder="Contoh: Minuman ">{{$bahanbaku->jenis_bahanbaku}}</textarea>
+                    <div class="form-group"><label for="jenisbahanbakulabel">Jenis Bahan Baku</label>
+                        <br>
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_bahan_baku" name="jenis_bahanbaku" value="Perempuan" {{$bahanbaku->jenis_bahanbaku == "Makanan" ? "checked" : ""}}>Makanan</label>
+                        
+                        <label class="radio-inline">
+                        <input type="radio" id="jenis_bahan_baku" name="jenis_bahanbaku" value="Laki-laki" {{$bahanbaku->jenis_bahanbaku == "Minuman" ? "checked" : ""}}>Minuman</label>
                     </div>
 
                     <div class="mb-3"><label for="hargasatuanlabel">Harga Satuan</label>

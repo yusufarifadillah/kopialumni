@@ -82,9 +82,9 @@
                                         <tr>
                                             <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>No_Telp</th>
+                                            <th>No Telp</th>
                                             <th>Posisi</th>
-                                            <th>Jenis_Kelamin</th>
+                                            <th>Jenis Kelamin</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>

@@ -54,7 +54,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Data Pegawai</h5>
+            <h5 class="card-title fw-semibold mb-4">Tambah Data Pegawai</h5>
 
                 <!-- Display Error jika ada error -->
                 @if ($errors->any())
@@ -81,22 +81,22 @@
                     <input class="form-control form-control-solid" id="nama_pegawai" name="nama_pegawai" type="text" placeholder="Contoh: Lee Jeno" value="{{old('nama_pegawai')}}">
                     </div>
                     
-                    <div class="mb-0"><label for="notelppegawailabel">No_Telp_Pegawai</label>
-                        <textarea class="form-control form-control-solid" id="no_telp_pegawai" name="no_telp_pegawai" rows="3" placeholder="Cth: 0812345678">{{old('no_telp_pegawai')}}</textarea>
+                    <div class="mb-0"><label for="notelppegawailabel">No Telepon Pegawai</label>
+                    <input class="form-control form-control-solid" id="no_telp_pegawai" name="no_telp_pegawai" rows="3" placeholder="Contoh: 08xxxxxxxxxx" value="{{old('no_telp_pegawai')}}">
                     </div>
 
-                    <div class="mb-0"><label for="posisipegawailabel">Posisi_Pegawai</label>
-                        <textarea class="form-control form-control-solid" id="posisi_pegawai" name="posisi_pegawai" rows="3" placeholder="Cth: Kasir">{{old('posisi_pegawai')}}</textarea>
+                    <div class="mb-0"><label for="posisipegawailabel">Posisi Pegawai</label>
+                    <input class="form-control form-control-solid" id="posisi_pegawai" name="posisi_pegawai" rows="3" placeholder="Contoh: Kasir" value="{{old('posisi_pegawai')}}">
                     </div>
 
-                    <div class="mb-0"><label for="jeniskelaminpegawai">Jenis_Kelamin_Pegawai</label>
+                    <div class="mb-0"><label for="jeniskelaminpegawai">Jenis Kelamin</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="perempuan" value="perempuan">
-                    <label class="form-check-label" for="perempuan">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="perempuan" value="Perempuan">
+                    <label class="form-check-label" for="Perempuan">
                       Perempuan
                     </label>
-                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="laki-laki" value="laki-laki">
-                    <label class="form-check-label" for="laki-laki">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin_pegawai" id="laki-laki" value="Laki-laki">
+                    <label class="form-check-label" for="Laki-laki">
                       Laki-laki
                     </label>
                     </div>
