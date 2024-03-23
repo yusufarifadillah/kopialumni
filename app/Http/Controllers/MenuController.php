@@ -55,8 +55,8 @@ class MenuController extends Controller
         //digunakan untuk validasi kemudian kalau ok tidak ada masalah baru disimpan ke db
         $validated = $request->validate([
             'kode_menu' => 'required',
-            'makanan' => 'required|unique:menu|min:5|max:255',
-            'minuman' => 'required|unique:menu|min:5|max:255',
+            'jenis' => 'required',
+            'nama' => 'required',
             'harga' => 'required',
         ]);
 
@@ -100,8 +100,8 @@ class MenuController extends Controller
         //digunakan untuk validasi kemudian kalau ok tidak ada masalah baru diupdate ke db
         $validated = $request->validate([
             'kode_menu' => 'required',
-            'makanan' => 'required|max:255',
-            'minuman' => 'required|max:255',
+            'jenis' => 'required',
+            'nama' => 'required',
             'harga' => 'required',
         ]);
     
