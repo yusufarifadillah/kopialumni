@@ -93,7 +93,7 @@
                         <br>
                         <label class="radio-inline">
                         <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Perempuan"> Perempuan</label>
-                        <br>
+                        
                         <label class="radio-inline">
                         <input type="radio" id="jenis_kelamin_pelanggan" name="jenis_kelamin_pelanggan" value="Laki-laki"> Laki-laki</label>
                     </div>

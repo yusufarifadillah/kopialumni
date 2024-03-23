@@ -22,7 +22,7 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Admin</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -77,25 +77,28 @@
                     </fieldset>
                     <input type="hidden" id="kode_menu" name="kode_menu" value="{{$kode_menu}}">
 
-                    <div class="mb-3"><label for="makananlabel">Makanan</label>
-                    <input class="form-control form-control-solid" id="makanan" name="makanan" type="text" placeholder="Contoh: Risoles" value="{{old('makanan')}}">
+                    <div class="mb-3"><label for="jenislabel">Jenis</label>
+                    <select class="form-control select2" id="jenis" name="jenis" type="select2" value="{{old('jenis')}}">
+                      <option value ="Makanan"> Makanan</option>
+                      <option value ="Minuman"> Minuman</option>
+                    </select>
                     </div>
 
-                    <div class="mb-3"><label for="minumanlabel">Minuman</label>
-                    <input class="form-control form-control-solid" id="minuman" name="minuman" type="text" placeholder="Contoh: Thai Tea" value="{{old('minuman')}}">
+                    <div class="mb-3"><label for="namalabel">Nama</label>
+                    <input class="form-control form-control-solid" id="nama" name="nama" type="text" placeholder="Contoh: Thai Tea" value="{{old('nama')}}">
                     </div>
+                    <div class="col-6">
         
                     <div class="mb-0"><label for="hargalabel">Harga</label>
-                        <textarea class="form-control form-control-solid" id="harga" name="harga" rows="3" placeholder="Rp. 10.000">{{old('harga')}}</textarea>
+                    <input class="form-control form-control-solid" id="harga" name="harga" rows="3" placeholder="10000" value="{{old('harga')}}">
                     </div>
                     <br>
-                    <!-- untuk tombol simpan -->
+                   <!-- untuk tombol simpan -->
                     
-                    <input class="col-sm-1 btn btn-success btn-sm" type="submit" value="Simpan">
+                   <input class="col-sm-1 btn btn-success btn-sm" type="submit" value="Ubah">
 
                     <!-- untuk tombol batal simpan -->
                     <a class="col-sm-1 btn btn-dark  btn-sm" href="{{ url('/menu') }}" role="button">Batal</a>
-                    
                 </form>
                 <!-- Akhir Dari Input Form -->
             

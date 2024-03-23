@@ -12,7 +12,7 @@ class Menu extends Model
     use HasFactory;
     protected $table = 'menu';
     // list kolom yang bisa diisi
-    protected $fillable = ['kode_menu','makanan','minuman','harga'];
+    protected $fillable = ['kode_menu','jenis','nama','harga'];
 
     // query nilai max dari kode menu untuk generate otomatis kode menu
     public static function getKodeMenu()

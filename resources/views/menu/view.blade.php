@@ -21,7 +21,7 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Admin</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -64,7 +64,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Master Data Menu</h6>
                             
                             <!-- Tombol Tambah Data -->
-                            <a href="{{ url('/perusahaan/create') }}" class="btn btn-primary btn-icon-split btn-sm">
+                            <a href="{{ url('/menu/create') }}" class="btn btn-primary btn-icon-split btn-sm">
                                 <span class="icon text-white-50">
                                     <i class="ti ti-plus"></i>
                                 </span>
@@ -81,27 +81,18 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th>Kode</th>
-                                            <th>Makanan</th>
-                                            <th>Minuman</th>
+                                            <th>Jenis</th>
+                                            <th>Nama</th>
                                             <th>Harga</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tfoot class="thead-dark">
-                                        <tr>
-                                            <th>Kode</th>
-                                            <th>Makanan</th>
-                                            <th>Minuman</th>
-                                            <th>Harga</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                     @foreach ($menu as $p)
                                         <tr>
                                             <td>{{ $p->kode_menu }}</td>
-                                            <td>{{ $p->makanan }}</td>
-                                            <td>{{ $p->minuman }}</td>
+                                            <td>{{ $p->jenis }}</td>
+                                            <td>{{ $p->nama }}</td>
                                             <td>{{ $p->harga }}</td>
                                             <td>
                                                     <a href="{{ route('menu.edit', $p->id) }}" class="btn btn-success btn-icon-split btn-sm">
