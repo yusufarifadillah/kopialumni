@@ -43,10 +43,12 @@
                     <br>
                    <!-- untuk tombol simpan -->
                     
-                   <button class="col-sm-1 btn btn-success btn-sm" value="Simpan">Simpan</button>
+
+                   <input class="col-sm-2 btn btn-success btn-sm" type="submit" value="Ubah">
+
 
                     <!-- untuk tombol batal simpan -->
-                    <a class="col-sm-1 btn btn-dark  btn-sm" href="{{ url('/menu') }}" role="button">Batal</a>
+                    <a class="col-sm-2 btn btn-dark  btn-sm" href="{{ url('/menu') }}" role="button">Batal</a>
                 </form>
                 <!-- Akhir Dari Input Form -->
             
