@@ -50,7 +50,7 @@
                     <br>
                     <!-- untuk tombol simpan -->
                     
-                    <input class="btn btn-success btn-sm" type="submit" value="Simpan">
+                    <button class="btn btn-success btn-sm" value="Simpan">Simpan</button>
         
                     <!-- untuk tombol batal simpan -->
                     <a class="btn btn-dark  btn-sm" href="{{ url('/bahanbaku') }}" role="button">Batal</a>

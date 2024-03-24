@@ -115,7 +115,7 @@
                 </div>
                 <div class="modal-body" id="xid"></div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                     <a id="btn-delete" class="btn btn-danger" href="#">Hapus</a>
                     
                 </div>

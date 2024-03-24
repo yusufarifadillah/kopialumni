@@ -44,7 +44,7 @@
                     <br>
                     <!-- untuk tombol simpan -->
                     
-                    <input class="col-sm-1 btn btn-success btn-sm" type="submit" value="Ubah">
+                    <button class="col-sm-1 btn btn-success btn-sm" value="Ubah">Ubah</button>
 
                     <!-- untuk tombol batal simpan -->
                     <a class="col-sm-1 btn btn-dark  btn-sm" href="{{ url('/menu') }}" role="button">Batal</a>
