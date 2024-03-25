@@ -27,10 +27,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-// dashboardbootstrap
-Route::get('/dashboardbootstrap', function () {
-    return view('dashboardbootstrap');
-})->middleware(['auth'])->name('dashboardbootstrap');
+// // dashboardbootstrap
+// Route::get('/dashboardbootstrap', function () {
+//     return view('dashboardbootstrap');
+// })->middleware(['auth'])->name('dashboardbootstrap');
 
 // route untuk validasi login
 Route::post('/validasi_login', [App\Http\Controllers\LoginController::class, 'show']);
