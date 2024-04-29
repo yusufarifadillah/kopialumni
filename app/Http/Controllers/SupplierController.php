@@ -49,7 +49,7 @@ class SupplierController extends Controller
             'kode_supplier' => 'required',
             'nama_supplier' => 'required',
             'alamat_supplier' => 'required',
-            'no_telp_supplier' => 'required',
+            'no_telp_supplier' => 'required |integer| min:1',
             'nama_cp_supplier' => 'required',
         ]);
         Supplier::create($request->all());
@@ -88,7 +88,7 @@ class SupplierController extends Controller
             'kode_supplier' => 'required',
             'nama_supplier' => 'required',
             'alamat_supplier' => 'required',
-            'no_telp_supplier' => 'required',
+            'no_telp_supplier' => 'required',12,
             'nama_cp_supplier' => 'required',
         ]);
     

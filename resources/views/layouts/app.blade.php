@@ -117,18 +117,52 @@
                                 <span class="hide-menu">Bahan Baku</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('coa') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-clipboard"></i>
+                            </span>
+                            <span class="hide-menu">Coa</span>
+                          </a>
+                        </li>
 
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Transaksi</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-report-money"></i>
-                                </span>
-                                <span class="hide-menu">Penjualan</span>
-                            </a>
+                          <a class="sidebar-link" href="{{ url('penjualan') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-shopping-cart"></i>
+                            </span>
+                            <span class="hide-menu">Penjualan</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('pembayaran/viewkeranjang') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">Pembayaran</span>
+                          </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('pembayaran/viewstatus') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">Status Pembayaran</span>
+                          </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('pembayaran/viewapprovalstatus') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">Approval Pembayaran</span>
+                          </a>
                         </li>
 
                         <li class="nav-small-cap">
@@ -136,12 +170,20 @@
                             <span class="hide-menu">LAPORAN</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-report"></i>
-                                </span>
-                                <span class="hide-menu">Laporan Penjualan</span>
-                            </a>
+                          <a class="sidebar-link" href="{{ url('jurnal/umum') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-files"></i>
+                            </span>
+                            <span class="hide-menu">Jurnal Umum</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('jurnal/bukubesar') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-archive"></i>
+                            </span>
+                            <span class="hide-menu">Buku Besar</span>
+                          </a>
                         </li>
 
                         
@@ -151,13 +193,37 @@
                             <span class="hide-menu">GRAFIK</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-chart-area"></i>
-                                </span>
-                                <span class="hide-menu">Penjualan</span>
-                            </a>
-                        </li>
+                        <a class="sidebar-link" href="{{ url('grafik/viewPenjualanBlnBerjalan') }}" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-dashboard"></i>
+                          </span>
+                          <span class="hide-menu">Penjualan</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ url('grafik/viewJmlPenjualan') }}" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-aperture"></i>
+                          </span>
+                          <span class="hide-menu">Barang</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ url('grafik/viewJmlBarangTerjual') }}" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-package"></i>
+                          </span>
+                          <span class="hide-menu">Barang Per Bulan</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ url('grafik/viewPenjualanSelectOption/2024') }}" aria-expanded="false">
+                          <span>
+                            <i class="ti ti-package"></i>
+                          </span>
+                          <span class="hide-menu">Penjualan AJAX</span>
+                        </a>
+                      </li>
 
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
