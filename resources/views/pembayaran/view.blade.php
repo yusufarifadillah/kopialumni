@@ -27,16 +27,6 @@
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
-                                            <tfoot class="thead-dark">
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tgl Bayar</th>
-                                                    <th>Barang</th>
-                                                    <th>Bukti Bayar</th>
-                                                    <th>Total</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </tfoot>
                                             <tbody>
                                             @foreach ($statuspembayaran as $p)
                                                 <tr>

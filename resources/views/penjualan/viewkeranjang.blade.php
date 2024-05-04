@@ -26,14 +26,6 @@
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tfoot class="thead-dark">
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Barang</th>
-                                            <th>Harga</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                     @foreach ($keranjang as $p)
                                         <tr>
