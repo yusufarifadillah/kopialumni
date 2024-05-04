@@ -7,6 +7,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\PembayaranController;
+
 
 /*
 |--------------------------------------------------------------------------
