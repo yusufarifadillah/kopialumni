@@ -19,6 +19,8 @@
   <!-- Untuk Tambahan DatacoaTables -->
   <link href="{{asset('libs/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">	
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- Bootstrap core JavaScript-->
   <script src="{{asset('libs/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('libs/bootstrap-external/js/bootstrap.bundle.min.js')}}"></script>
@@ -245,6 +247,16 @@
       <!-- End Sidebar scroll-->
     </aside>
     <!--  Sidebar End -->
+    @if(isset($status_hapus))
+        <script>
+            Swal.fire({
+                title: 'Berhasil!',
+                text: 'Hapus Data Berhasil',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+        </script>
+    @endif
     <!--  Main wrapper -->
     <div class="body-wrapper">
       <!--  Header Start -->
@@ -312,6 +324,8 @@
   <!-- Datatables plugin -->
   <script src="{{asset('libs/datatables/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('libs/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+  
 
   <!-- fancy box -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

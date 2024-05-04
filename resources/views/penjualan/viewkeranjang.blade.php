@@ -113,5 +113,4 @@
         </div>
     </div>   
 <!-- Akhir Modal Delete -->
-
-    </x-app-layout>
+</x-app-layout>

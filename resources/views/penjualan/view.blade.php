@@ -282,5 +282,4 @@
         
     </script>
 <!-- Akhir mengisi data pada tabel -->
-
-    </x-app-layout>
+</x-app-layout>
