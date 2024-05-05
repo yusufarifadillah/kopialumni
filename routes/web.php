@@ -28,9 +28,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 // dashboardbootstrap
-Route::get('/dashboardbootstrap', function () {
-    return view('dashboardbootstrap');
-})->middleware(['auth'])->name('dashboardbootstrap');
+// Route::get('/dashboardbootstrap', function () {
+//     return view('dashboardbootstrap');
+// })->middleware(['auth'])->name('dashboardbootstrap');
 
 // route untuk validasi login
 Route::post('/validasi_login', [App\Http\Controllers\LoginController::class, 'show']);

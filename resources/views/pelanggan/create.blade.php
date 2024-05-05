@@ -34,7 +34,7 @@
                     </div>
         
                     <div class="mb-0"><label for="alamatpelangganlabel">Alamat Pelanggan</label>
-                        <textarea class="form-control form-control-solid" id="alamat_pelanggan" name="alamat_pelanggan" rows="3" placeholder="Contoh: Jl PGA 18">{{old('alamat_pelanggan')}}</textarea>
+                        <input class="form-control form-control-solid" id="alamat_pelanggan" name="alamat_pelanggan" type="text" placeholder="Contoh: Jl PGA 18">{{old('alamat_pelanggan')}}
                     </div>
 
                     <div class="form-group"><label for="jeniskelaminpelangganlabel">Jenis Kelamin Pelanggan</label>
