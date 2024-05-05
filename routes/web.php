@@ -8,6 +8,9 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\CoaController;
+use App\Http\Controllers\PembelianController;
+
 
 
 /*
@@ -37,21 +40,35 @@ Route::get('/dashboard', function () {
 
 // route untuk validasi login
 Route::post('/validasi_login', [App\Http\Controllers\LoginController::class, 'show']);
+
 // route supplier
 Route::resource('/supplier', SupplierController::class)->middleware(['auth']);
 Route::get('/supplier/destroy/{id}', [App\Http\Controllers\SupplierController::class,'destroy'])->middleware(['auth']);
+
 // route Pegawai
 Route::resource('/pegawai', PegawaiController::class)->middleware(['auth']);
 Route::get('/pegawai/destroy/{id}', [App\Http\Controllers\PegawaiController::class,'destroy'])->middleware(['auth']);
+
 // route Bahan Baku
 Route::resource('/bahanbaku', BahanbakuController::class)->middleware(['auth']);
 Route::get('/bahanbaku/destroy/{id}', [App\Http\Controllers\BahanbakuController::class,'destroy'])->middleware(['auth']);
+
 // route Menu
 Route::resource('/menu', MenuController::class)->middleware(['auth']);
 Route::get('/menu/destroy/{id}', [App\Http\Controllers\MenuController::class,'destroy'])->middleware(['auth']);
+
 // route Pelanggan
 Route::resource('/pelanggan', PelangganController::class)->middleware(['auth']);
 Route::get('/pelanggan/destroy/{id}', [App\Http\Controllers\PelangganController::class,'destroy'])->middleware(['auth']);
+
+// sebelum route resource
+Route::get('coa/tabel', [App\Http\Controllers\CoaController::class,'tabel'])->middleware(['auth']);
+Route::get('coa/fetchcoa', [App\Http\Controllers\CoaController::class,'fetchcoa'])->middleware(['auth']);
+Route::get('coa/fetchAll', [App\Http\Controllers\CoaController::class,'fetchAll'])->middleware(['auth']);
+Route::get('coa/edit/{id}', [App\Http\Controllers\CoaController::class,'edit'])->middleware(['auth']);
+Route::get('coa/destroy/{id}', [App\Http\Controllers\CoaController::class,'destroy'])->middleware(['auth']);
+Route::resource('coa', CoaController::class)->middleware(['auth']);
+
 // untuk transaksi penjualan
 Route::get('penjualan/barang/{id}', [App\Http\Controllers\PenjualanController::class,'getDataBarang'])->middleware(['auth']);
 Route::get('penjualan/keranjang', [App\Http\Controllers\PenjualanController::class,'keranjang'])->middleware(['auth']);
@@ -86,5 +103,9 @@ Route::get('jurnal/umum', [App\Http\Controllers\JurnalController::class,'jurnalu
 Route::get('jurnal/viewdatajurnalumum/{periode}', [App\Http\Controllers\JurnalController::class,'viewdatajurnalumum'])->middleware(['auth']);
 Route::get('jurnal/bukubesar', [App\Http\Controllers\JurnalController::class,'bukubesar'])->middleware(['auth']);
 Route::get('jurnal/viewdatabukubesar/{periode}/{akun}', [App\Http\Controllers\JurnalController::class,'viewdatabukubesar'])->middleware(['auth']);
+
+// route Pelanggan
+Route::resource('/pembelian', PembelianController::class)->middleware(['auth']);
+Route::get('/pembelian/destroy/{id}', [App\Http\Controllers\PembelianController::class,'destroy'])->middleware(['auth']);
 
 require __DIR__.'/auth.php';

@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('grafik', function (Blueprint $table) {
+        Schema::create('coa', function (Blueprint $table) {
             $table->id();
+            $table->string('kode_akun')->unique();
+            $table->string('nama_akun')->unique();
+            $table->string('header_akun');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('grafik');
+        Schema::dropIfExists('coa');
     }
 };

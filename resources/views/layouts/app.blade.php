@@ -17,7 +17,8 @@
   <link rel="shortcut icon" type="image/png" href="{{asset('images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('css/styles.min.css')}}" />
   <!-- Untuk Tambahan DatacoaTables -->
-  <link href="{{asset('libs/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">	
+  <link href="{{asset('libs/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>	
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -133,6 +134,14 @@
                             <span class="hide-menu">Transaksi</span>
                         </li>
                         <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('pembelian') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-shopping-cart"></i>
+                            </span>
+                            <span class="hide-menu">Pembelian</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-item">
                           <a class="sidebar-link" href="{{ url('penjualan') }}" aria-expanded="false">
                             <span>
                               <i class="ti ti-shopping-cart"></i>
@@ -216,14 +225,6 @@
                             <i class="ti ti-package"></i>
                           </span>
                           <span class="hide-menu">Barang Per Bulan</span>
-                        </a>
-                      </li>
-                      <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('grafik/viewPenjualanSelectOption/2024') }}" aria-expanded="false">
-                          <span>
-                            <i class="ti ti-package"></i>
-                          </span>
-                          <span class="hide-menu">Penjualan AJAX</span>
                         </a>
                       </li>
 

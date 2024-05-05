@@ -112,7 +112,6 @@ class JurnalController extends Controller
 
     // buku besar
     public function bukubesar(){
-        $id_perusahaan = 1; //ini nanti diganti dengan session id perusahaan
         $akun = Jurnal::viewakunbukubesar();
         return view('laporan/bukubesar',
                         [

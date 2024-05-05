@@ -57,7 +57,7 @@ class Jurnal extends Model
          $sql = "   SELECT a.*,b.nama_akun
                     FROM jurnal a JOIN coa b 
                     ON (a.kode_akun=b.kode_akun)
-                    DATE_FORMAT(tgl_jurnal, '%Y-%m')= ?
+                    WHERE DATE_FORMAT(tgl_jurnal, '%Y-%m')= ?
                     AND b.kode_akun = ?
                     ORDER BY 1 ASC
                 ";
