@@ -72,6 +72,30 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ url('berita1/galeri') }}" aria-expanded="false">
+                                <span> 
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Berita 1</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ url('berita2/galeri') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Berita 2</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ url('berita3/galeri') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-layout-dashboard"></i>
+                                </span>
+                                <span class="hide-menu">Berita 3</span>
+                            </a>
+                        </li>
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Masterdata</span>
@@ -176,6 +200,32 @@
                           </a>
                         </li>
 
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('midtrans') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">Midtrans</span>
+                          </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('pembayaran/viewstatusPG') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">View Status PG</span>
+                          </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                          <a class="sidebar-link" href="{{ url('midtrans/bayar') }}" aria-expanded="false">
+                            <span>
+                              <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="hide-menu">Pembayaran PG</span>
+                          </a>
+                        </li>
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">LAPORAN</span>
@@ -228,18 +278,6 @@
                         </a>
                       </li>
 
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">ANALISIS DATA</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-cell-signal-5"></i>
-                                </span>
-                                <span class="hide-menu">Proyeksi Penjualan</span>
-                            </a>
-                        </li>
 
                     </ul>
                 </nav>

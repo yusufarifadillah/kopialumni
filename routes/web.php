@@ -9,7 +9,13 @@ use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\CoaController;
+use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\GrafikController;
+use App\Http\Controllers\Berita1Controller;
+use App\Http\Controllers\Berita2Controller;
+use App\Http\Controllers\Berita3Controller;
+use App\Http\Controllers\MidtransController;
 
 
 
@@ -108,4 +114,22 @@ Route::get('jurnal/viewdatabukubesar/{periode}/{akun}', [App\Http\Controllers\Ju
 Route::resource('/pembelian', PembelianController::class)->middleware(['auth']);
 Route::get('/pembelian/destroy/{id}', [App\Http\Controllers\PembelianController::class,'destroy'])->middleware(['auth']);
 
+// route Berita1
+Route::get('berita1', [App\Http\Controllers\Berita1Controller::class,'index'])->middleware(['auth']);
+Route::get('berita1/galeri', [App\Http\Controllers\Berita1Controller::class,'getNews'])->middleware(['auth']);
+
+// route Berita2
+Route::get('berita2', [App\Http\Controllers\Berita2Controller::class,'index'])->middleware(['auth']);
+Route::get('berita2/galeri', [App\Http\Controllers\Berita2Controller::class,'getNews'])->middleware(['auth']);
+
+// route Berita3
+Route::get('berita3', [App\Http\Controllers\Berita3Controller::class,'index'])->middleware(['auth']);
+Route::get('berita3/galeri', [App\Http\Controllers\Berita3Controller::class,'getNews'])->middleware(['auth']);
+
+// route midtrans
+Route::get('midtrans', [App\Http\Controllers\MidtransController::class,'index'])->middleware(['auth']);
+Route::get('midtrans/status', [App\Http\Controllers\MidtransController::class,'cekstatus2'])->middleware(['auth']);
+Route::get('midtrans/status2/{id}', [App\Http\Controllers\MidtransController::class,'cekstatus'])->middleware(['auth']);
+Route::get('midtrans/bayar', [App\Http\Controllers\MidtransController::class,'bayar'])->middleware(['auth']);
+Route::post('midtrans/proses_bayar', [App\Http\Controllers\MidtransController::class,'proses_bayar'])->middleware(['auth']);
 require __DIR__.'/auth.php';
