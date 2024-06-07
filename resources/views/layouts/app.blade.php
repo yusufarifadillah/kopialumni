@@ -39,6 +39,9 @@
 
   <!-- fancy box -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+
+    <!-- Untuk akses midtrans -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{env('MIDTRANS_CLIENT_KEY')}}"></script>
 </head>
 
 <body>
@@ -227,6 +230,7 @@
                             <span class="hide-menu">Pembayaran PG</span>
                           </a>
                         </li>
+                        @if(Session::get('kelompok')=='admin')
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">LAPORAN</span>
@@ -278,7 +282,7 @@
                           <span class="hide-menu">Barang Per Bulan</span>
                         </a>
                       </li>
-
+                    @endif
 
                     </ul>
                 </nav>

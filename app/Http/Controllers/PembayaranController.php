@@ -67,8 +67,8 @@ class PembayaranController extends Controller
 		        $file->move($tujuan_upload,$fileName);
 
                 // simpan data
-                $empData = ['no_transaksi' => $request->input('no_transaksi'), 'tgl_bayar' => $request->input('tgl_bayar'), 'tgl_konfirmasi' => date("Y-m-d"), 'bukti_bayar' => $fileName, 'jenis_pembayaran' => 'tunai', 'status' => 'menunggu_approve'];
-                Pembayaran::create($empData);
+                $empData = ['no_transaksi' => $request->input('no_transaksi'), 'tgl_bayar' => $request->input('tgl_bayar'), 'bukti_bayar' => $fileName, 'jenis_pembayaran' => 'tunai', 'status' => 'menunggu_approve'];
+		        Pembayaran::create($empData);
 
                 // update status menjadi konfirmasi bayar
                 $id_customer = Auth::id();
@@ -227,6 +227,7 @@ class PembayaranController extends Controller
         //catat ke jurnal
         DB::table('jurnal')->insert([
             'id_transaksi' => $data_pembayaran->id,
+            'id_perusahaan' => 1, //bisa diganti kalau sudah live
             'kode_akun' => '111',
             'tgl_jurnal' => $date,
             'posisi_d_c' => 'd',
@@ -237,6 +238,7 @@ class PembayaranController extends Controller
 
         DB::table('jurnal')->insert([
             'id_transaksi' => $data_pembayaran->id,
+            'id_perusahaan' => 1, //bisa diganti kalau sudah live
             'kode_akun' => '411',
             'tgl_jurnal' => $date,
             'posisi_d_c' => 'c',

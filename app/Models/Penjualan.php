@@ -547,7 +547,7 @@ class Penjualan extends Model
         foreach($barang as $b):
             $jml = $b->jml;
         endforeach;
-        return $jml;    
+        return $jml;
     }
 
 

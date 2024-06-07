@@ -2,65 +2,49 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Berita3;
-use App\Http\Requests\StoreBerita3Request;
-use App\Http\Requests\UpdateBerita3Request;
+// untuk mengakses http
+use Illuminate\Support\Facades\Http;
+
+use Illuminate\Http\Request;
 
 class Berita3Controller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // untuk tes response dari API
     public function index()
     {
-        //
+        $response = Http::get('https://newsapi.org/v2/everything?q=espresso&languange=en&apiKey=c5f8fafec0b848b99bad6396350d44de');
+        $hasil = json_decode($response);
+        // var_dump($hasil);
+
+        if($hasil->status=="ok"){
+            echo "Jumlah Status     : ".$hasil->status."<br>";
+            echo "Jumlah Results    : ".$hasil->totalResults."<br>";
+            echo "Sumber Artikel-1  : ".$hasil->articles[0]->source->name."<br>";
+            echo "Nama Artikel-2    : ".$hasil->articles[1]->title."<br>";
+            echo "URL Gambar        : ".$hasil->articles[1]->urlToImage."<br>";
+
+            // dapatkan jumlah datanya
+            echo "<hr>";
+            foreach ($hasil->articles as $row){
+                echo $row->source->name."-".$row->author."-".$row->title."-".$row->url."-".$row->description."-".$row->urlToImage;
+                echo "<br>"; 
+            } 
+               
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreBerita3Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Berita3 $berita3)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Berita3 $berita3)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateBerita3Request $request, Berita3 $berita3)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Berita3 $berita3)
-    {
-        //
+    // untuk galeri berita
+    public function getNews(){
+        // akses API
+        $url = 'https://newsapi.org/v2/everything?q=espresso&languange=en&apiKey=c5f8fafec0b848b99bad6396350d44de';
+        $response = Http::get($url);
+        $hasil = json_decode($response);
+        // var_dump($hasil);
+        return view(
+            'berita3.berita3',
+            [
+                'hasil' => $hasil
+            ]
+        );
     }
 }
